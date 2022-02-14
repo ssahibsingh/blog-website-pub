@@ -4,7 +4,7 @@ const ejs = require("ejs");
 const _ = require("lodash");
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb+srv://admin-exnone:nNone2019@ay-blog-website.9fwwe.mongodb.net/AY-BlogWebsite");
+mongoose.connect("CONNECTION STRING HERE");
 
 const homeContent = "This is Blog Website in which you can compose new Blog Posts by writing '/compose' after the current URL and you will see your composed post on the Home Page itself.";
 const aboutContent = "This Blog Website is created with the help of Node.js and Database MongoDB. Other Technologies used are: Expressjs, EJS and Mongoose.";
@@ -107,7 +107,6 @@ app.get("/posts/:postId", function (req, res) {
     }
   })
 });
-
 
 app.listen(process.env.PORT || 3000, function () {
   console.log("Server started on port 3000");
